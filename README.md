@@ -9,4 +9,4 @@ https://calculator-pradeep.netlify.app
 
 Proposal Page
 
-loveloveproposelove.netlify.app/
+https://loveloveproposelove.netlify.app/
