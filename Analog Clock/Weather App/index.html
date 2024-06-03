@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, height=device-height">
+    <meta name="generator" content="blob-project_content_v101_generalized">
+    <meta name="referrer" content="no-referrer">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta data-react-helmet="true" property="og:title" content="Analog Clock Using JS" />
+    <meta content="A Live Analog Clock Using JS" property="og:description">
+    <meta content="https://media.discordapp.net/attachments/773005768458764349/830680683981832212/1.jpeg" property="og:image">
+    <meta name="theme-color" content="#ff0000">
+    <meta property="og:locale" content="en-IN" />
+    <link rel="stylesheet" href="style.css">
+    <title>Analog Clock</title>
+</head>
+<body >
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr">
+
+            </div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn">
+                
+            </div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
+
+</div>
+    <script type="text/javascript">
+        const toggle = document.getElementById('toggle');
+const body = document.body;
+
+toggle.addEventListener('input', (e) => {
+  const isChecked = e.target.checked;
+  
+  if(isChecked) {
+    body.classList.add('light');
+  } else {
+    body.classList.remove('light');
+  }
+});
+        const deg = 6 ;
+        const hr = document.querySelector("#hr");
+        const mn = document.querySelector("#mn");
+        const sc = document.querySelector("#sc");
+        setInterval(() => {
+            let day = new Date();
+            let hh = day.getHours() * 30;
+            let mm = day.getMinutes() * deg;
+            let ss = day.getSeconds() * deg;
+         hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+       
+        })
+    </script>
+      
+      <div class="footer">
+        <h6 class="my-2">Made with <i class="fas fa-heart"></i> by <a
+            href="https://www.sachinlohar.com/" target="_blank"><b>Sachin Lohar</b></a></h6>
+      </div>
+
+</body>
+</html>
