@@ -10,3 +10,7 @@ https://calculator-pradeep.netlify.app
 Proposal Page
 
 https://loveloveproposelove.netlify.app/
+
+Speech-To-Text 
+
+https://speect-to-text.netlify.app
